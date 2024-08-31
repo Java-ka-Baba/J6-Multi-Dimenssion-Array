@@ -1,0 +1,8 @@
+syntax
+declaration
+    datatype[][] arrayName;
+initialization
+    arrayName = new datatype[int colSize][int rowSize];
+
+example:
+    int[][] array2D = new int[3][3];
