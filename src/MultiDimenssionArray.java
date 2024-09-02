@@ -15,7 +15,7 @@ public class MultiDimenssionArray {
         //  game will be played for 9 turns, on odd turn you will print O
         // and on even turn you will print X
         // you will ask user to enter row and col, by displaying full tic-tac-toe
-
+        boolean flag = false;
         for (int i = 1; i <= 9; i++) {
             System.out.println("------------------------------------------");
             print2DArray(ticTacToe);
@@ -29,7 +29,97 @@ public class MultiDimenssionArray {
                 ticTacToe[row][col] = 'O';
             }
             System.out.println("------------------------------------------");
+            //check winner
+            if(i >= 5 && i <= 9){
+                // first row
+                if(ticTacToe[0][0] == 'O' && ticTacToe[0][1] == 'O' && ticTacToe[0][2] == 'O'
+                    || ticTacToe[0][0] == 'X' && ticTacToe[0][1] == 'X' && ticTacToe[0][2] == 'X'
+                ){
+                    if(ticTacToe[0][0] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                }else if(ticTacToe[1][0] == 'O' && ticTacToe[1][1] == 'O' && ticTacToe[1][2] == 'O'
+                        || ticTacToe[1][0] == 'X' && ticTacToe[1][1] == 'X' && ticTacToe[1][2] == 'X'
+                ){
+                    if(ticTacToe[1][0] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                }
+                else if(ticTacToe[2][0] == 'O' && ticTacToe[2][1] == 'O' && ticTacToe[2][2] == 'O'
+                        || ticTacToe[2][0] == 'X' && ticTacToe[2][1] == 'X' && ticTacToe[2][2] == 'X'
+                ){
+                    if(ticTacToe[2][0] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                } else if (ticTacToe[0][0] == 'O' && ticTacToe[1][0] == 'O' && ticTacToe[2][0] == 'O'
+                        || ticTacToe[0][0] == 'X' && ticTacToe[1][0] == 'X' && ticTacToe[2][0] == 'X'
+                ) {
+                    if(ticTacToe[0][0] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                } else if (ticTacToe[0][1] == 'O' && ticTacToe[1][1] == 'O' && ticTacToe[2][1] == 'O'
+                        || ticTacToe[0][1] == 'X' && ticTacToe[1][1] == 'X' && ticTacToe[2][1] == 'X'
+                ) {
+                    if(ticTacToe[0][1] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                }
+                else if (ticTacToe[0][2] == 'O' && ticTacToe[1][2] == 'O' && ticTacToe[2][2] == 'O'
+                        || ticTacToe[0][2] == 'X' && ticTacToe[1][2] == 'X' && ticTacToe[2][2] == 'X'
+                ) {
+                    if(ticTacToe[0][2] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                }else if (ticTacToe[0][0] == 'O' && ticTacToe[1][1] == 'O' && ticTacToe[2][2] == 'O'
+                        || ticTacToe[0][0] == 'X' && ticTacToe[1][1] == 'X' && ticTacToe[2][2] == 'X'
+                ) {
+                    if(ticTacToe[0][0] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                }else if (ticTacToe[0][2] == 'O' && ticTacToe[1][1] == 'O' && ticTacToe[2][0] == 'O'
+                        || ticTacToe[0][2] == 'X' && ticTacToe[1][1] == 'X' && ticTacToe[2][0] == 'X'
+                ) {
+                    if(ticTacToe[0][0] == 'O'){
+                        System.out.println("Player 1 is winner");
+                    }else{
+                        System.out.println("Player 2 is winner");
+                    }
+                    flag = true;
+                    break;
+                }
+            }
 
+        }
+        if(!flag){
+            System.out.println("Play Again");
         }
         System.out.println("Final");
         print2DArray(ticTacToe);
